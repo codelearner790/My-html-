@@ -6,7 +6,7 @@
     Time: 6:00 PM</p>
     <p>Location: Central Park, New York</p>
 
-    <button id = "toggledesription">Show event details</button>
+    <button id = "toggledescription">Show event details</button>
     <div id = "eventdescription" style="display: none;">
           <p>Join us for an unforgettable day of music, food and fun. Featuring performances by top artists and an incredible lineup of local food trucks</p>
     </div>
@@ -19,17 +19,18 @@
       <input type="email" id = "email" name= "email" required>
 
       <button type = "submit">Register</button>
+      <p id="formMessage"></p>
       <p id = "countdown"></p>
     </form>
 
     <script>
     document.getElementById("toggledescription").addEventListener("click",function() {
-      var description = document.getElementById("eventdecsription");
+      var description = document.getElementById("eventdescription");
       if (description.style.display === "none"){
         description.style.display = "block";
         this.innerText = "Hide event details";
       }else{
-        descriptions.style.display = "none";
+        description.style.display = "none";
         this.innerText = "Show event details";
       }
     });
